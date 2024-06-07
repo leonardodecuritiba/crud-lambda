@@ -59,18 +59,18 @@ Em **Handler**, especifique o arquivo e a função a ser usada, ex `create.handl
 
 ![](https://t9013111682.p.clickup-attachments.com/t9013111682/8b8d4950-4b42-4019-9d3d-4fd6c93b8f8d/image.png)
 
-    *   Selecione o recurso criado e clique em **Actions** > **Create Method.**
-    *   Escolha `POST` e clique no ícone de check.
-    *   Selecione **Lambda Function** como tipo de integração.
-    *   Insira o nome da função Lambda (`createFunction`) e clique em **Save**.
-    *   Conceda permissão ao API Gateway para invocar sua função Lambda se solicitado.
+*   Selecione o recurso criado e clique em **Actions** > **Create Method.**
+*   Escolha `POST` e clique no ícone de check.
+*   Selecione **Lambda Function** como tipo de integração.
+*   Insira o nome da função Lambda (`createFunction`) e clique em **Save**.
+*   Conceda permissão ao API Gateway para invocar sua função Lambda se solicitado.
 
 ![](https://t9013111682.p.clickup-attachments.com/t9013111682/29787f03-0de6-4c0e-8164-91ed484ada10/image.png)
 
-    *   Repita os passos para os outros métodos:
-    *   `GET` para leitura (`readFunction`).
-    *   `PUT` para atualização (`updateFunction`).
-    *   `DELETE` para exclusão (`deleteFunction`).
+*   Repita os passos para os outros métodos:
+*   `GET` para leitura (`readFunction`).
+*   `PUT` para atualização (`updateFunction`).
+*   `DELETE` para exclusão (`deleteFunction`).
 
 4. Implantar a API:
     *   Clique em **Actions** > **Deploy API**.
