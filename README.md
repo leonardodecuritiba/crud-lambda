@@ -26,7 +26,7 @@ Este projeto implementa um CRUD utilizando AWS Lambda e DynamoDB.
 4.1 Criar Funções Lambda
 No painel de console da AWS crie uma função Lambda:
 
-![](https://t9013111682.p.clickup-attachments.com/t9013111682/5e2bea54-e70b-4bbf-bb8e-87760c9185f3/image.png)
+![](images/1.png)
 
 Associe a role:
 
@@ -46,41 +46,41 @@ Em **Handler**, especifique o arquivo e a função a ser usada, ex `create.handl
 
 1. Acesse o Console do API Gateway [aqui](https://console.aws.amazon.com/apigateway)
 2. Criar uma nova API REST:
-    *   Clique em **Create API**.
-    *   Escolha **REST API**.
-    *   Selecione **New API** e dê um nome para sua API.
-    *   Clique em **Create API**.
-![](https://t9013111682.p.clickup-attachments.com/t9013111682/f50cab12-cc6e-45d0-863f-b7814237f388/image.png)
+   _ Clique em **Create API**.
+   _ Escolha **REST API**.
+   _ Selecione **New API** e dê um nome para sua API.
+   _ Clique em **Create API**.
+   ![](https://t9013111682.p.clickup-attachments.com/t9013111682/f50cab12-cc6e-45d0-863f-b7814237f388/image.png)
 
 3. Criar Métodos para Cada Operação:
-    *   Para a operação de criação (Create):
-        *   Selecione **Actions** > **Create Resource**.
-        *   Dê um nome ao recurso, como `pixs`.
+    - Para a operação de criação (Create):
+        - Selecione **Actions** > **Create Resource**.
+        - Dê um nome ao recurso, como `pixs`.
 
 ![](https://t9013111682.p.clickup-attachments.com/t9013111682/8b8d4950-4b42-4019-9d3d-4fd6c93b8f8d/image.png)
 
-*   Selecione o recurso criado e clique em **Actions** > **Create Method.**
-*   Escolha `POST` e clique no ícone de check.
-*   Selecione **Lambda Function** como tipo de integração.
-*   Insira o nome da função Lambda (`createFunction`) e clique em **Save**.
-*   Conceda permissão ao API Gateway para invocar sua função Lambda se solicitado.
+-   Selecione o recurso criado e clique em **Actions** > **Create Method.**
+-   Escolha `POST` e clique no ícone de check.
+-   Selecione **Lambda Function** como tipo de integração.
+-   Insira o nome da função Lambda (`createFunction`) e clique em **Save**.
+-   Conceda permissão ao API Gateway para invocar sua função Lambda se solicitado.
 
 ![](https://t9013111682.p.clickup-attachments.com/t9013111682/29787f03-0de6-4c0e-8164-91ed484ada10/image.png)
 
-*   Repita os passos para os outros métodos:
-*   `GET` para leitura (`readFunction`).
-*   `PUT` para atualização (`updateFunction`).
-*   `DELETE` para exclusão (`deleteFunction`).
+-   Repita os passos para os outros métodos:
+-   `GET` para leitura (`readFunction`).
+-   `PUT` para atualização (`updateFunction`).
+-   `DELETE` para exclusão (`deleteFunction`).
 
 4. Implantar a API:
-    *   Clique em **Actions** > **Deploy API**.
-    *   Crie uma nova **Stage** (por exemplo, `dev`) e clique em **Deploy**.
+    - Clique em **Actions** > **Deploy API**.
+    - Crie uma nova **Stage** (por exemplo, `dev`) e clique em **Deploy**.
 
 ![](https://t9013111682.p.clickup-attachments.com/t9013111682/53a376b4-a2e3-4e76-b2a3-f180b4a25633/image.png)
 
 5. Obtenha a URL da API:
 
-    *   Após a implantação, você receberá uma URL base para a sua API. Essa URL será usada para testar as funções Lambda.
+    - Após a implantação, você receberá uma URL base para a sua API. Essa URL será usada para testar as funções Lambda.
 
 ## Testando
 
