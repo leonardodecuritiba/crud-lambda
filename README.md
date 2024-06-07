@@ -24,13 +24,13 @@ Este projeto implementa um CRUD utilizando AWS Lambda e DynamoDB.
     ```
 4. Crie e configure as funções Lambda e API Gateway no console da AWS conforme as instruções abaixo.
 5. Criar Funções Lambda
--   No painel de console da AWS crie uma função Lambda:
+    -   No painel de console da AWS crie uma função Lambda:
 ![](images/1.png)
--   Associe a role:
+    -   Associe a role:
 ![](images/2.png)
--   Faça o upload do arquivo .zip
+    -   Faça o upload do arquivo .zip
 ![](images/3.png)
--   Em **Handler**, especifique o arquivo e a função a ser usada, ex `create.handler`.
+    -   Em **Handler**, especifique o arquivo e a função a ser usada, ex `create.handler`.
 ![](images/4.png)
 ![](images/5.png)
 6. Configurar API Gateway
@@ -46,16 +46,16 @@ Este projeto implementa um CRUD utilizando AWS Lambda e DynamoDB.
         - Selecione **Actions** > **Create Resource**.
         - Dê um nome ao recurso, como `pixs`.
 ![](images/7.png)
--   Selecione o recurso criado e clique em **Actions** > **Create Method.**
--   Escolha `POST` e clique no ícone de check.
--   Selecione **Lambda Function** como tipo de integração.
--   Insira o nome da função Lambda (`createFunction`) e clique em **Save**.
--   Conceda permissão ao API Gateway para invocar sua função Lambda se solicitado.
+    -   Selecione o recurso criado e clique em **Actions** > **Create Method.**
+    -   Escolha `POST` e clique no ícone de check.
+    -   Selecione **Lambda Function** como tipo de integração.
+    -   Insira o nome da função Lambda (`createFunction`) e clique em **Save**.
+    -   Conceda permissão ao API Gateway para invocar sua função Lambda se solicitado.
 ![](images/8.png)
--   Repita os passos para os outros métodos:
--   `GET` para leitura (`readFunction`).
--   `PUT` para atualização (`updateFunction`).
--   `DELETE` para exclusão (`deleteFunction`).
+    -   Repita os passos para os outros métodos:
+    -   `GET` para leitura (`readFunction`).
+    -   `PUT` para atualização (`updateFunction`).
+    -   `DELETE` para exclusão (`deleteFunction`).
 10. Implantar a API:
     - Clique em **Actions** > **Deploy API**.
     - Crie uma nova **Stage** (por exemplo, `dev`) e clique em **Deploy**.
