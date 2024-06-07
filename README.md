@@ -23,64 +23,44 @@ Este projeto implementa um CRUD utilizando AWS Lambda e DynamoDB.
     zip -r function.zip create.js read.js update.js delete.js package.json node_modules
     ```
 4. Crie e configure as funções Lambda e API Gateway no console da AWS conforme as instruções abaixo.
-
 4.1 Criar Funções Lambda
 -   No painel de console da AWS crie uma função Lambda:
-
 ![](images/1.png)
-
 -   Associe a role:
-
 ![](images/2.png)
-
 -   Faça o upload do arquivo .zip
-
 ![](images/3.png)
-
 -   Em **Handler**, especifique o arquivo e a função a ser usada, ex `create.handler`.
-
 ![](images/4.png)
-
 ![](images/5.png)
-
 4.2 Configurar API Gateway
-
 1. Acesse o Console do API Gateway [aqui](https://console.aws.amazon.com/apigateway)
 2. Criar uma nova API REST:
-   _ Clique em **Create API**.
-   _ Escolha **REST API**.
-   _ Selecione **New API** e dê um nome para sua API.
-   _ Clique em **Create API**.
+   - Clique em **Create API**.
+   - Escolha **REST API**.
+   - Selecione **New API** e dê um nome para sua API.
+   - Clique em **Create API**.
    ![](images/6.png)
-
 3. Criar Métodos para Cada Operação:
     - Para a operação de criação (Create):
         - Selecione **Actions** > **Create Resource**.
         - Dê um nome ao recurso, como `pixs`.
-
 ![](images/7.png)
-
 -   Selecione o recurso criado e clique em **Actions** > **Create Method.**
 -   Escolha `POST` e clique no ícone de check.
 -   Selecione **Lambda Function** como tipo de integração.
 -   Insira o nome da função Lambda (`createFunction`) e clique em **Save**.
 -   Conceda permissão ao API Gateway para invocar sua função Lambda se solicitado.
-
 ![](images/8.png)
-
 -   Repita os passos para os outros métodos:
 -   `GET` para leitura (`readFunction`).
 -   `PUT` para atualização (`updateFunction`).
 -   `DELETE` para exclusão (`deleteFunction`).
-
 4. Implantar a API:
     - Clique em **Actions** > **Deploy API**.
     - Crie uma nova **Stage** (por exemplo, `dev`) e clique em **Deploy**.
-
 ![](images/9.png)
-
 5. Obtenha a URL da API:
-
     - Após a implantação, você receberá uma URL base para a sua API. Essa URL será usada para testar as funções Lambda.
 
 ## Testando
