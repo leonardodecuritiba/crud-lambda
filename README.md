@@ -30,17 +30,17 @@ Este projeto implementa um CRUD utilizando AWS Lambda e DynamoDB.
 
 Associe a role:
 
-![](images/image (2).png)
+![](images/2.png)
 
 Faça o upload do arquivo .zip
 
-![](images/image (3).png)
+![](images/3.png)
 
 Em **Handler**, especifique o arquivo e a função a ser usada, ex `create.handler`.
 
-![](images/image (4).png)
+![](images/4.png)
 
-![](images/image (5).png)
+![](images/5.png)
 
 4.2 Configurar API Gateway
 
@@ -50,14 +50,14 @@ Em **Handler**, especifique o arquivo e a função a ser usada, ex `create.handl
    _ Escolha **REST API**.
    _ Selecione **New API** e dê um nome para sua API.
    _ Clique em **Create API**.
-   ![](images/image (6).png)
+   ![](images/6.png)
 
 3. Criar Métodos para Cada Operação:
     - Para a operação de criação (Create):
         - Selecione **Actions** > **Create Resource**.
         - Dê um nome ao recurso, como `pixs`.
 
-![](images/image (7).png)
+![](images/7.png)
 
 -   Selecione o recurso criado e clique em **Actions** > **Create Method.**
 -   Escolha `POST` e clique no ícone de check.
@@ -65,7 +65,7 @@ Em **Handler**, especifique o arquivo e a função a ser usada, ex `create.handl
 -   Insira o nome da função Lambda (`createFunction`) e clique em **Save**.
 -   Conceda permissão ao API Gateway para invocar sua função Lambda se solicitado.
 
-![](images/image (8).png)
+![](images/8.png)
 
 -   Repita os passos para os outros métodos:
 -   `GET` para leitura (`readFunction`).
@@ -76,7 +76,7 @@ Em **Handler**, especifique o arquivo e a função a ser usada, ex `create.handl
     - Clique em **Actions** > **Deploy API**.
     - Crie uma nova **Stage** (por exemplo, `dev`) e clique em **Deploy**.
 
-![](images/image (9).png)
+![](images/9.png)
 
 5. Obtenha a URL da API:
 
