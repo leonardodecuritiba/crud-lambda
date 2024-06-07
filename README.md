@@ -23,20 +23,21 @@ Este projeto implementa um CRUD utilizando AWS Lambda e DynamoDB.
     zip -r function.zip create.js read.js update.js delete.js package.json node_modules
     ```
 4. Crie e configure as funções Lambda e API Gateway no console da AWS conforme as instruções abaixo.
-   4.1 Criar Funções Lambda
-   No painel de console da AWS crie uma função Lambda:
+
+4.1 Criar Funções Lambda
+_ No painel de console da AWS crie uma função Lambda:
 
 ![](images/1.png)
 
-Associe a role:
+_ Associe a role:
 
 ![](images/2.png)
 
-Faça o upload do arquivo .zip
+_ Faça o upload do arquivo .zip
 
 ![](images/3.png)
 
-Em **Handler**, especifique o arquivo e a função a ser usada, ex `create.handler`.
+_ Em **Handler**, especifique o arquivo e a função a ser usada, ex `create.handler`.
 
 ![](images/4.png)
 
