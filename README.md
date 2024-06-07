@@ -26,7 +26,7 @@ Este projeto implementa um CRUD utilizando AWS Lambda e DynamoDB.
 4.1 Criar Funções Lambda
 No painel de console da AWS crie uma função Lambda:
 
-![](https://t9013111682.p.clickup-attachments.com/t9013111682/5e2bea54-e70b-4bbf-bb8e-87760c9185f3/image.png)
+![x](https://t9013111682.p.clickup-attachments.com/t9013111682/5e2bea54-e70b-4bbf-bb8e-87760c9185f3/image.png)
 
 Associe a role:
 
