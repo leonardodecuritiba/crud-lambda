@@ -1,0 +1,42 @@
+@baseUrl = https://ugp69ekv11.execute-api.us-east-2.amazonaws.com/dev/pixs
+
+### Listar todos os PIX
+GET {{baseUrl}}
+
+### Criar um novo PIX
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+    "sender": "StackX",
+    "receipt": "Leonardo",
+    "value": 12000,
+    "description": "Pagamento pelo desenvolvimento"
+}
+
+### Listar todos os PIX
+GET {{baseUrl}}
+
+### Atualizar o PIX
+PUT {{baseUrl}}
+Content-Type: application/json
+
+{
+    "uuid": "cfb11f03-e7bb-485a-bcfc-8ef6be260ce7",
+    "sender": "StackX",
+    "receipt": "Leonardo",
+    "value": 50000,
+    "description": "Pagamento pelo desenvolvimento, atualizado"
+}
+
+
+### Deletar um PIX
+DELETE {{baseUrl}}
+Content-Type: application/json
+
+{
+    "uuid": "e188977e-4244-47b9-b0ed-48cd85f63abf"
+}
+
+### Listar todos os PIX
+GET {{baseUrl}}
